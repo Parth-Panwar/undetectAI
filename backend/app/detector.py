@@ -12,7 +12,7 @@ def detect_video(file_path: str):
 def run(file_path: str, url: str):
     with sync_playwright() as p:
         browser = p.chromium.launch(
-            headless=False
+            headless=True
         )
 
         page = browser.new_page()
